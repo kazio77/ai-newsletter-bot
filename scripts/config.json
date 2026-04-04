@@ -1,0 +1,107 @@
+{
+  "sources": [
+    {
+      "name": "TechCrunch AI",
+      "type": "rss",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "category": "해외 테크미디어"
+    },
+    {
+      "name": "The Verge AI",
+      "type": "rss",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "category": "해외 테크미디어"
+    },
+    {
+      "name": "Ars Technica",
+      "type": "rss",
+      "url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+      "filter_keywords": ["AI", "artificial intelligence", "machine learning", "LLM", "GPT", "Claude", "neural", "deep learning", "transformer"],
+      "category": "해외 테크미디어"
+    },
+    {
+      "name": "TLDR AI",
+      "type": "rss",
+      "url": "https://tldr.tech/ai/rss",
+      "category": "AI 뉴스레터"
+    },
+    {
+      "name": "The Batch (Andrew Ng)",
+      "type": "rss",
+      "url": "https://www.deeplearning.ai/the-batch/feed/",
+      "category": "AI 뉴스레터"
+    },
+    {
+      "name": "Ben's Bites",
+      "type": "rss",
+      "url": "https://bensbites.beehiiv.com/feed",
+      "category": "AI 뉴스레터"
+    },
+    {
+      "name": "ArXiv AI/ML",
+      "type": "arxiv",
+      "url": "http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG&sortBy=submittedDate&sortOrder=descending&max_results=15",
+      "category": "논문/연구"
+    },
+    {
+      "name": "OpenAI Blog",
+      "type": "rss",
+      "url": "https://openai.com/blog/rss.xml",
+      "category": "빅테크 블로그"
+    },
+    {
+      "name": "Anthropic Blog",
+      "type": "rss",
+      "url": "https://www.anthropic.com/rss.xml",
+      "category": "빅테크 블로그"
+    },
+    {
+      "name": "Google AI Blog",
+      "type": "rss",
+      "url": "https://blog.google/technology/ai/rss/",
+      "category": "빅테크 블로그"
+    },
+    {
+      "name": "Meta AI Blog",
+      "type": "rss",
+      "url": "https://ai.meta.com/blog/rss/",
+      "category": "빅테크 블로그"
+    },
+    {
+      "name": "GeekNews",
+      "type": "rss",
+      "url": "https://news.hada.io/rss",
+      "filter_keywords": ["AI", "인공지능", "LLM", "GPT", "Claude", "머신러닝", "딥러닝", "생성형", "ChatGPT", "Gemini", "transformer", "neural"],
+      "category": "국내"
+    },
+    {
+      "name": "AI타임스",
+      "type": "scrape",
+      "url": "https://www.aitimes.com/news/articleList.html?sc_section_code=S1N1",
+      "selectors": {
+        "item": ".article-list-content .list-block",
+        "title": ".titles a",
+        "link": ".titles a",
+        "summary": ".lead"
+      },
+      "category": "국내"
+    },
+    {
+      "name": "테크M",
+      "type": "scrape",
+      "url": "https://www.techm.kr/news/articleList.html?sc_sub_section_code=S2N19",
+      "selectors": {
+        "item": ".article-list .list-block",
+        "title": ".titles a",
+        "link": ".titles a",
+        "summary": ".lead"
+      },
+      "category": "국내"
+    }
+  ],
+  "settings": {
+    "cluster_threshold": 0.6,
+    "collect_hours": 28,
+    "max_articles_per_source": 30
+  }
+}
