@@ -290,7 +290,7 @@ def summarize_with_claude(clusters):
     }
 
     data = {
-        "model": "claude-sonnet-4-20250514",
+        "model": "claude-3-5-sonnet-20241022",
         "max_tokens": 4000,
         "messages": [{"role": "user", "content": prompt}]
     }
@@ -301,6 +301,9 @@ def summarize_with_claude(clusters):
         json=data,
         timeout=120
     )
+
+    if not resp.ok:
+        print(f"  ❌ Claude API 에러 [{resp.status_code}]: {resp.text}")
     resp.raise_for_status()
     result = resp.json()
 
